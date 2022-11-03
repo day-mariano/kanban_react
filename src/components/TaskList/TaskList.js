@@ -1,9 +1,10 @@
 import React from "react";
 import "./tasklist.css"
 import PropTypes from "prop-types"
+
 import TaskItem from "../TaskItem/TaskItem";
 
-export default function TaskList({ title, taskState, onAddTask, tasks, onTaskUpdate }) {
+export default function TaskList({ title, taskState, onAddTask, tasks, onTaskUpdate, onDeleteTask}) {
   const addTask = () => {
     onAddTask("Nova tarefa", taskState);
   }
@@ -20,6 +21,7 @@ export default function TaskList({ title, taskState, onAddTask, tasks, onTaskUpd
               title={task.title} 
               taskState={task.state}
               onTaskUpdate={onTaskUpdate}
+              onDeleteTask={onDeleteTask}
             />
           )
         })}
