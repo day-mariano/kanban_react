@@ -1,6 +1,7 @@
 import React from "react";
 import "./tasklist.css"
 import PropTypes from "prop-types"
+import plusIcon from "../../img/plus-icon.svg"
 
 import TaskItem from "../TaskItem/TaskItem";
 
@@ -25,8 +26,12 @@ export default function TaskList({ title, taskState, onAddTask, tasks, onTaskUpd
             />
           )
         })}
+       
+        <button onClick={addTask} className="btn">
+          <img src={plusIcon} alt="plus"/>
+          Adicionar tarefa
+        </button>
       </div>
-      <button onClick={addTask}>Adicionar tarefa</button>
     </div>
   )
 }
