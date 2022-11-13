@@ -26,7 +26,7 @@ export default function TaskList({ title, taskState, onAddTask, tasks, onTaskUpd
             />
           )
         })}
-       
+        {tasks.length === 0 && <div className="empty-list">Lista vazia</div>}
         <button onClick={addTask} className="btn">
           <img src={plusIcon} alt="plus"/>
           Adicionar tarefa
